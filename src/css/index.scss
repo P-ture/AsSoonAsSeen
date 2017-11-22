@@ -1,3 +1,17 @@
-header {
- color: blue;    
+@import './shared/reset';
+@import './shared/config';
+@import './shared/mixins';
+
+section.assoonasseen {
+	header {
+		background: linear-gradient(to left,#5a5b53, #5a5b53, black, black, black, black, black, #5a5b53); 
+		box-sizing: border-box;
+		padding: 20px;
+		h1 {
+			text-indent: -99999px;
+		} 
+	}
+	main {
+
+	}
 }

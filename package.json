@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run html && webpack -p && npm run sass && npm run images",
-    "start": "webpack-dev-server",
+    "start": "(cd public && php -S 0.0.0.0:6969)",
     "sass": "node-sass src/css/index.scss public/css/default.css && npm run css",
-    "html": "htmlmin -o public/index.html src/index.html",
+    "html": "htmlmin -o public/index.php src/index.php",
     "css": "postcss public/css/default.css -o public/css/default.css --use autoprefixer",
     "images": "ncp src/images public/images",
-    "watch": "concurrently \"webpack --watch \" \"node-sass src/css/index.scss public/css/default.css --watch\"",
+    "watch": "concurrently \"npm run start \" \"webpack --watch \" \"node-sass src/css/index.scss public/css/default.css --watch\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,11 +29,13 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "concurrently": "^3.5.1",
+    "es6-promise": "^4.1.1",
     "html-minifier-cli": "^0.1.0",
     "ncp": "^2.0.0",
     "node-sass": "^4.7.2",
     "postcss-cli": "^4.1.1",
     "react": "^16.1.1",
+    "react-dom": "^16.1.1",
     "rimraf": "^2.6.2"
   },
   "dependencies": {

@@ -4,10 +4,10 @@ module.exports = {
     entry: ['babel-polyfill', './src/js/index.js'],
     target: 'web',
     output: {
-        path: __dirname + "/public",
+        path: __dirname,
         filename: './public/js/index.js',
         libraryTarget: 'var',
-        publicPath: __dirname + "/public"
+        publicPath: __dirname
     },
     devServer: {
         inline: true,
