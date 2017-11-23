@@ -43,7 +43,6 @@ section.assoonasseen {
             background-size: 20px;
             margin-right: 0;
           }
-        
         }
         > span.email {
           background: url("/images/email.svg") no-repeat bottom center /30px;
@@ -57,12 +56,17 @@ section.assoonasseen {
   main {
     background: $brand-colour;
     section.main-image {
-      height: 60vmin;
+      height: 80vmin;
+      @media (max-width: $tablet-break) {
+        background-size: 60vmin;
+      }
       > img {
         height: 100%;
         width: 100%;
       }
-      
+    }
+    section.welcome {
+
     }
   }
   footer {

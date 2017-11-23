@@ -53,6 +53,13 @@ export default class Layout extends Component {
                 <section className="main-image">
                     <img src="/images/main-image.jpg" />
                 </section>
+                <section className="welcome">
+                    <p>At a time when new media are multiplying and evolving fast,
+                    we cut through the noise, keep the bigger picture under control,
+                    focus on content,
+                    provide sophisticated graphics and imaginative visuals for a meaningful communication.
+                    Let As Soon As Seen take care of your business image.</p>
+                </section>
                 <section>
                     <form action="">
                         <input type="text" />
