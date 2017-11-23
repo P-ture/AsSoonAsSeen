@@ -65,7 +65,7 @@ export default class Layout extends Component {
                 </section>
             </main>
             <footer>
-                <p>Copyright © 2017, Designed by ASSOONASSEEN.</p>
+                <p><span className="purple">As</span>Soon<span className="yellow">As</span>Seen 2017</p>
             </footer>
           </section>
         )

@@ -55,6 +55,7 @@ section.assoonasseen {
     } 
   }
   main {
+    background: $brand-colour;
     section.main-image {
       height: 60vmin;
       > img {
@@ -62,6 +63,22 @@ section.assoonasseen {
         width: 100%;
       }
       
+    }
+  }
+  footer {
+    padding: 20px;
+    box-sizing: border-box;
+    background: $brand-colour;
+    p {
+      color: white;
+
+      > span.yellow {
+        color: $brand-yellow;
+      
+      }
+      > span.purple {
+        color: $brand-purple;
+      }
     }
   }
 }
