@@ -7,7 +7,7 @@
 section.assoonasseen {
   header {
     display: flex;
-    background: linear-gradient(to left,#5a5b53, #5a5b53, black, black, black, black, black, #5a5b53); 
+    background: $linear-background;
     box-sizing: border-box;
     padding: 30px 20px;
     justify-content: space-between;
@@ -60,19 +60,35 @@ section.assoonasseen {
       @media (max-width: $tablet-break) {
         background-size: 60vmin;
       }
+      @media (max-width: $mobile-break) {
+        background-size: 40vmin;
+      }
       > img {
         height: 100%;
         width: 100%;
       }
     }
     section.welcome {
-
+      margin: 30px 0;
+      > p {
+        font-size: 25px;
+        color: $font-colour;
+        text-align: center;
+        width: 80vw;
+        margin: 0 auto;
+        @media (max-width: $tablet-break) {
+          font-size: 20px;
+        }
+        @media (max-width: $mobile-break) {
+          font-size: 16px;
+        }
+      }
     }
   }
   footer {
     padding: 20px;
     box-sizing: border-box;
-    background: $brand-colour;
+    background: $brand-colour;;
     p {
       color: white;
 
