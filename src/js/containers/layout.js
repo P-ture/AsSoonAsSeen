@@ -60,14 +60,14 @@ export default class Layout extends Component {
                     provide sophisticated graphics and imaginative visuals for a meaningful communication.
                     Let As Soon As Seen take care of your business image.</p>
                 </section>
-                <section>
+                <section className="homepage-email">
                     <form action="">
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <textarea />
-                        <button type="submit"></button>
+                        <input placeholder="Name*" id="name" type="text" />
+                        <input placeholder="Telephone*" id="telephone" type="text" />
+                        <input placeholder="Email*" id="email" type="text" />
+                        <input placeholder="Subject" id="subject" type="text" />
+                        <textarea placeholder="Message..." id="message" />
+                        <button type="submit">Send</button>
                     </form>
                 </section>
             </main>

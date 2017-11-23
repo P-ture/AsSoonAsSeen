@@ -56,13 +56,13 @@ section.assoonasseen {
   main {
     background: $brand-colour;
     section.main-image {
-      height: 80vmin;
-      @media (max-width: $tablet-break) {
-        background-size: 60vmin;
-      }
-      @media (max-width: $mobile-break) {
-        background-size: 40vmin;
-      }
+      // height: 80vmin;
+      // @media (max-width: $tablet-break) {
+      //   background-size: 60vmin;
+      // }
+      // @media (max-width: $mobile-break) {
+      //   background-size: 40vmin;
+      // }
       > img {
         height: 100%;
         width: 100%;
@@ -81,6 +81,39 @@ section.assoonasseen {
         }
         @media (max-width: $mobile-break) {
           font-size: 16px;
+        }
+      }
+    }
+    > section.homepage-email {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      > form {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        margin: 30px 0;
+        @media (max-width: $tablet-break) {
+          width: 60vw;
+        }
+        @media (max-width: $mobile-break) {
+          width: 70vw;
+        }
+
+        > input, > textarea, > button {
+          background: $brand-colour;
+          margin: 5px;
+          box-sizing: border-box;
+          padding: 15px 20px;
+          color: $font-colour;
+          border: 1px solid $font-colour;
+          font-size: 16px;
+          @media (max-width: $tablet-break) {
+            font-size: 14px;
+          }
+          &::placeholer {
+            color: $font-colour;
+          }
         }
       }
     }
