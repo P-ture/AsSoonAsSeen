@@ -1,17 +1,67 @@
 @import './shared/reset';
 @import './shared/config';
 @import './shared/mixins';
+@import './components/modal';
+@import url('https://fonts.googleapis.com/css?family=Meie+Script');
 
 section.assoonasseen {
-	header {
-		background: linear-gradient(to left,#5a5b53, #5a5b53, black, black, black, black, black, #5a5b53); 
-		box-sizing: border-box;
-		padding: 20px;
-		h1 {
-			text-indent: -99999px;
-		} 
-	}
-	main {
+  header {
+    display: flex;
+    background: linear-gradient(to left,#5a5b53, #5a5b53, black, black, black, black, black, #5a5b53); 
+    box-sizing: border-box;
+    padding: 30px 20px;
+    justify-content: space-between;
+    align-items: flex-end;
 
-	}
+    > a {
+      cursor: pointer;
+      h1 {
+        text-indent: -99999px;
+        background: url("/images/logo.png") no-repeat 0 50%;
+        background-size: contain;
+        height: 80px;
+        width: 600px;
+        cursor: pointer;
+        @media (max-width: $tablet-break) {
+          width: 450px;
+          height: 60px;
+        }
+        @media (max-width: $tablet-break) {
+          width: 200px;
+          height: 27px;
+        }
+      } 
+    }
+    > section.contact {
+      display: flex;
+      align-items: flex-end;
+      > div {
+        > span.phone {
+          background: url("/images/phone.svg") no-repeat bottom center /30px;
+          margin-right: 5px;
+          @media (max-width: $mobile-break) {
+            background-size: 20px;
+            margin-right: 0;
+          }
+        
+        }
+        > span.email {
+          background: url("/images/email.svg") no-repeat bottom center /30px;
+          @media (max-width: $mobile-break) {
+            background-size: 20px;
+          }
+        }
+      }
+    } 
+  }
+  main {
+    section.main-image {
+      height: 60vmin;
+      > img {
+        height: 100%;
+        width: 100%;
+      }
+      
+    }
+  }
 }
