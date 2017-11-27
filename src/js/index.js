@@ -6,9 +6,10 @@ import Layout from './containers/layout';
 
     $document.addEventListener('DOMContentLoaded', () => {
 
-        // Resolve the node in which the consortium preferences is rendered to.
+        // Resolve the node in which the app is rendered into, with the `isSent` prop.
         const mountNode = $document.querySelector('section.assoonasseen');
-        mountNode && render(<Layout />, mountNode);
+        const isSent = mountNode.dataset.success === '1' ? true : false;
+        mountNode && render(<Layout isSent={isSent} />, mountNode);
 
     });
 

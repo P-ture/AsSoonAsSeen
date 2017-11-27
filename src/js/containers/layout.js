@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { debounce } from 'lodash';
 import Modal from '../components/modal/index';
 /**
@@ -8,18 +9,26 @@ import Modal from '../components/modal/index';
 export default class Layout extends Component {
 
     /**
+     * @constant propTypes
+     * @type {Object}
+     */
+    static propTypes = {
+        isSent: PropTypes.bool.isRequired
+    };
+
+    /**
      * @constant state
      * @type {Object}
      */
     state = {
         modal: false,
         modalTwo: false,
+        showStatus: this.props.isSent
     }
 
     render() {
-        const modal = this.state.modal;
-        const modalTwo = this.state.modalTwo;
-        const fixedNav = this.state.fixedNav;
+
+        const { modal, modalTwo, fixedNav, showStatus } = this.state;
 
         return (
           <section className="content">
@@ -27,6 +36,16 @@ export default class Layout extends Component {
             <header className={`fixed-nav`}>
                 <a href="/"><h1>AsSoonAsSeen</h1></a>
                 <section className="contact">
+
+                    <Modal
+                        className="status"
+                        title="Contact Us"
+                        open={!showStatus}
+                        onClose={() => this.setState({ showStatus: !showStatus })}
+                        >
+                        Message has been successfully sent!
+                    </Modal>
+
                     <Modal
                         className="modal"
                         title="Call Us"
@@ -37,6 +56,7 @@ export default class Layout extends Component {
                         >
                         <p>0044 (0)77 91 075 281</p>
                     </Modal>
+
                     <Modal
                         className="modal-two"
                         title="Email Us"
@@ -47,9 +67,9 @@ export default class Layout extends Component {
                         >
                         <a href="mailto:info@assoonasseen.co.uk?subject=AsSoonAsSoon%Enquiry">info@assoonasseen.co.uk</a>
                     </Modal>
+
                 </section>
                 
-
             </header>
             <main>
                 <section className="main-image">
