@@ -40,10 +40,10 @@ export default class Layout extends Component {
                     <Modal
                         className="status"
                         title="Contact Us"
-                        open={!showStatus}
+                        open={showStatus}
                         onClose={() => this.setState({ showStatus: !showStatus })}
                         >
-                        Message has been successfully sent!
+                        <p>Message has been successfully sent!</p>
                     </Modal>
 
                     <Modal
@@ -88,10 +88,10 @@ export default class Layout extends Component {
                 </section>
                 <section className="homepage-email">
                     <form action="index.php" method="post">
-                        <input placeholder="Name*" name="name" id="name" type="text" />
-                        <input placeholder="Telephone*" name="telephone" id="telephone" type="text" />
-                        <input placeholder="Email*" name="email" id="email" type="text" />
-                        <input placeholder="Subject" name="subject" id="subject" type="text" />
+                        <input required placeholder="Name*" name="name" id="name" type="text" />
+                        <input required placeholder="Telephone*" name="telephone" id="telephone" type="text" />
+                        <input required placeholder="Email*" name="email" id="email" type="text" />
+                        <input required placeholder="Subject*" name="subject" id="subject" type="text" />
                         <textarea name="message" placeholder="Message..." id="message" />
                         <button type="submit">Send</button>
                     </form>

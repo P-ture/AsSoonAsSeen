@@ -7,152 +7,147 @@
 section.assoonasseen {
   font-family: 'Roboto', sans-serif;
 
-  section.header-fix {
-    display: block;
-    background: $brand-colour;
-    height: 180px;
-    width: 100%;
-    @media (max-width: $tablet-break) {
-      height: 110px;
+  > section.content {
+    > section.header-fix {
+      display: block;
+      background: $brand-colour;
+      height: 180px;
+      width: 100%;
+      @media (max-width: $tablet-break) {
+        height: 110px;
+      }
     }
-  }
-
-  header {
-    display: flex;
-    background: $linear-background;
-    box-sizing: border-box;
-    padding: 70px 20px 30px;
-    justify-content: space-between;
-    align-items: flex-end;
-    position: fixed;
-    width: 100%;
-    min-height: 180px;
-    top: 0;
-    left: 0;
-    @media (max-width: $tablet-break) {
-      min-height: 110px;
-      padding-top: 50px;
-    }
-
-    > a {
-      cursor: pointer;
-      h1 {
-        text-indent: -99999px;
-        background: url("/images/logo.png") no-repeat 0 50%;
-        background-size: contain;
-        height: 80px;
-        width: 600px;
+  
+    > header {
+      display: flex;
+      background: $linear-background;
+      box-sizing: border-box;
+      padding: 70px 20px 30px;
+      justify-content: space-between;
+      align-items: flex-end;
+      position: fixed;
+      width: 100%;
+      min-height: 180px;
+      top: 0;
+      left: 0;
+      @media (max-width: $tablet-break) {
+        min-height: 110px;
+        padding-top: 50px;
+      }
+  
+      > a {
         cursor: pointer;
-        @media (max-width: $tablet-break) {
-          width: 500px;
-          height: 60px;
-        }
-        @media (max-width: $mobile-break) {
-          width: 200px;
-          height: 27px;
+        h1 {
+          text-indent: -99999px;
+          background: url("/images/logo.png") no-repeat 0 50%;
+          background-size: contain;
+          height: 80px;
+          width: 600px;
+          cursor: pointer;
+          @media (max-width: $tablet-break) {
+            width: 500px;
+            height: 60px;
+          }
+          @media (max-width: $mobile-break) {
+            width: 200px;
+            height: 27px;
+          }
+        } 
+      }
+      > section.contact {
+        display: flex;
+        align-items: flex-end;
+        > div {
+          > span.phone {
+            background: url("/images/phone.svg") no-repeat bottom center /30px;
+            margin-right: 5px;
+            @media (max-width: $mobile-break) {
+              background-size: 20px;
+              margin-right: 0;
+            }
+          }
+          > span.email {
+            background: url("/images/email.svg") no-repeat bottom center /30px;
+            @media (max-width: $mobile-break) {
+              background-size: 20px;
+            }
+          }
         }
       } 
     }
-    > section.contact {
-      display: flex;
-      align-items: flex-end;
-      > div {
-        > span.phone {
-          background: url("/images/phone.svg") no-repeat bottom center /30px;
-          margin-right: 5px;
-          @media (max-width: $mobile-break) {
-            background-size: 20px;
-            margin-right: 0;
-          }
-        }
-        > span.email {
-          background: url("/images/email.svg") no-repeat bottom center /30px;
-          @media (max-width: $mobile-break) {
-            background-size: 20px;
+    > main {
+      background: $brand-colour;
+      section.main-image {
+        > picture {
+          > img {
+            height: 100%;
+            width: 100%;
           }
         }
       }
-    } 
-  }
-  main {
-    background: $brand-colour;
-    section.main-image {
-      // height: 80vmin;
-      // @media (max-width: $tablet-break) {
-      //   background-size: 60vmin;
-      // }
-      // @media (max-width: $mobile-break) {
-      //   background-size: 40vmin;
-      // }
-      > picture {
-        > img {
-          height: 100%;
-          width: 100%;
-        }
-      }
-    }
-    section.welcome {
-      margin: 30px 0;
-      > p {
-        font-size: 25px;
-        color: $font-colour;
-        text-align: center;
-        width: 80vw;
-        margin: 0 auto;
-        @media (max-width: $tablet-break) {
-          font-size: 20px;
-        }
-        @media (max-width: $mobile-break) {
-          font-size: 16px;
-        }
-      }
-    }
-    > section.homepage-email {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      > form {
-        display: flex;
-        flex-direction: column;
-        width: 50vw;
+      > section.welcome {
         margin: 30px 0;
-        @media (max-width: $tablet-break) {
-          width: 60vw;
-        }
-        @media (max-width: $mobile-break) {
-          width: 70vw;
-        }
-        > input, > textarea, > button {
-          background: $brand-colour;
-          margin: 5px;
-          box-sizing: border-box;
-          padding: 15px 20px;
+        > p {
+          font-size: 25px;
           color: $font-colour;
-          border: 1px solid $font-colour;
-          font-size: 16px;
+          text-align: center;
+          width: 80vw;
+          margin: 0 auto;
           @media (max-width: $tablet-break) {
-            font-size: 14px;
+            font-size: 20px;
           }
-          &::placeholer {
+          @media (max-width: $mobile-break) {
+            font-size: 16px;
+          }
+        }
+      }
+      > section.homepage-email {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        > form {
+          display: flex;
+          flex-direction: column;
+          width: 50vw;
+          margin: 30px 0;
+          @media (max-width: $tablet-break) {
+            width: 60vw;
+          }
+          @media (max-width: $mobile-break) {
+            width: 70vw;
+          }
+          > input, > textarea, > button {
+            background: $brand-colour;
+            margin: 5px;
+            box-sizing: border-box;
+            padding: 15px 20px;
             color: $font-colour;
+            border: 1px solid $font-colour;
+            font-size: 16px;
+            @media (max-width: $tablet-break) {
+              font-size: 14px;
+            }
+            &::placeholer {
+              color: $font-colour;
+            }
           }
         }
       }
     }
-  }
-  footer {
-    padding: 20px;
-    box-sizing: border-box;
-    background: $brand-colour;;
-    p {
-      color: white;
-
-      > span.yellow {
-        color: $brand-yellow;
-      
-      }
-      > span.purple {
-        color: $brand-purple;
+    footer {
+      padding: 20px;
+      box-sizing: border-box;
+      background: $brand-colour;;
+      p {
+        color: white;
+  
+        > span.yellow {
+          color: $brand-yellow;
+        
+        }
+        > span.purple {
+          color: $brand-purple;
+        }
       }
     }
   }

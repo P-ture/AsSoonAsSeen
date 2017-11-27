@@ -12,7 +12,7 @@
     "css": "postcss public/css/default.css -o public/css/default.css --use autoprefixer",
     "images": "ncp src/images public/images",
     "watch": "concurrently \"npm run start \" \"webpack --watch \" \"node-sass src/css/index.scss public/css/default.css --watch\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: Tyler is a lazy cunt\" && exit 1"
   },
   "repository": {
     "type": "git",
