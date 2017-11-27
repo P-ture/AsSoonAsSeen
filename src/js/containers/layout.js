@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { debounce } from 'lodash';
 import Modal from '../components/modal/index';
 /**
  * @class Carousel
@@ -12,17 +13,18 @@ export default class Layout extends Component {
      */
     state = {
         modal: false,
-        modalTwo: false
+        modalTwo: false,
     }
-    
 
     render() {
         const modal = this.state.modal;
         const modalTwo = this.state.modalTwo;
+        const fixedNav = this.state.fixedNav;
 
         return (
           <section className="content">
-            <header>
+            <section className={`header-fix  display`} />
+            <header className={`fixed-nav`}>
                 <a href="/"><h1>AsSoonAsSeen</h1></a>
                 <section className="contact">
                     <Modal
@@ -51,8 +53,12 @@ export default class Layout extends Component {
             </header>
             <main>
                 <section className="main-image">
-                    <img src="/images/main-image.jpg" />
+                    <picture>
+                        <source media="(max-width: 767px)" srcSet="/images/mobile-main.jpg" />
+                        <img src="/images/main-image.jpg" />
+                    </picture>
                 </section>
+               
                 <section className="welcome">
                     <p>At a time when new media are multiplying and evolving fast,
                     we cut through the noise, keep the bigger picture under control,
@@ -61,7 +67,7 @@ export default class Layout extends Component {
                     Let As Soon As Seen take care of your business image.</p>
                 </section>
                 <section className="homepage-email">
-                    <form action="">
+                    <form action="index.php" method="post">
                         <input placeholder="Name*" id="name" type="text" />
                         <input placeholder="Telephone*" id="telephone" type="text" />
                         <input placeholder="Email*" id="email" type="text" />
@@ -72,7 +78,7 @@ export default class Layout extends Component {
                 </section>
             </main>
             <footer>
-                <p><span className="purple">As</span>Soon<span className="yellow">As</span>Seen 2017</p>
+                <p>AsSoonAsSeen 2017</p>
             </footer>
           </section>
         )
