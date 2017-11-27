@@ -68,11 +68,11 @@ export default class Layout extends Component {
                 </section>
                 <section className="homepage-email">
                     <form action="index.php" method="post">
-                        <input placeholder="Name*" id="name" type="text" />
-                        <input placeholder="Telephone*" id="telephone" type="text" />
-                        <input placeholder="Email*" id="email" type="text" />
-                        <input placeholder="Subject" id="subject" type="text" />
-                        <textarea placeholder="Message..." id="message" />
+                        <input placeholder="Name*" name="name" id="name" type="text" />
+                        <input placeholder="Telephone*" name="telephone" id="telephone" type="text" />
+                        <input placeholder="Email*" name="email" id="email" type="text" />
+                        <input placeholder="Subject" name="subject" id="subject" type="text" />
+                        <textarea name="message" placeholder="Message..." id="message" />
                         <button type="submit">Send</button>
                     </form>
                 </section>

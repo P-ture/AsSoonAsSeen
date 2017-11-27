@@ -1,26 +1,26 @@
 <?php
 
-// $sent = false;
+$sent = false;
 
-//   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//     $from = $_POST['email'];
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $from = $_POST['email'];
 
-//     $to      =  'info@assoonasseen.co.uk';
-//     $subject = $_POST['subject'];
+    $to      =  'info@assoonasseen.co.uk';
+    $subject = $_POST['subject'];
 
-//     $content= '';
-//     $content = "Name: " . $_POST['name'] . "\n\n";
-//     $content = "Telephone: " . $_POST['telephone'] . "\n\n";
-//     $content = "Message: " . $_POST['message'] . "\n\n";
+    $content= '';
+    $content = "Name: " . $_POST['name'] . "\n\n";
+    $content = "Telephone: " . $_POST['telephone'] . "\n\n";
+    $content = "Message: " . $_POST['message'] . "\n\n";
 
-//     $host = "localhost";
-//     $username = "info@crrinstall.co.uk";
-//     $password = "fff";
+    $host = "localhost";
+    $username = "info@crrinstall.co.uk";
+    $password = "fff";
 
-//     $headers = sprintf("From: %s\r\nReply-To: %s", $to, $to);
-//     $sent = mail($to, $subject, $content, $headers);
+    $headers = sprintf("From: %s\r\nReply-To: %s", $to, $to);
+    $sent = mail($to, $subject, $content, $headers);
  
-//   }
+  }
 ?>
 <!DOCTYPE html>
 <html>
