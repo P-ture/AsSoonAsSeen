@@ -1,5 +1,5 @@
 <?php
-
+print_r($_POST);
 $sent = false;
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -8,14 +8,15 @@ $sent = false;
     $to      =  'info@assoonasseen.co.uk';
     $subject = $_POST['subject'];
 
-    $content= '';
-    $content = "Name: " . $_POST['name'] . "\n\n";
-    $content = "Telephone: " . $_POST['telephone'] . "\n\n";
-    $content = "Message: " . $_POST['message'] . "\n\n";
+    $content = '';
+    $content .= "Name: " . $_POST['name'] . "\n\n";
+    $content .= "Telephone: " . $_POST['telephone'] . "\n\n";
+    $content .= "Email: " . $_POST['email'] . "\n\n";
+    $content .= "Message: " . $_POST['message'] . "\n\n";
 
     $host = "localhost";
-    $username = "info@crrinstall.co.uk";
-    $password = "fff";
+    $username = "info@assoonasseen.co.uk";
+    $password = "lauramuner";
 
     $headers = sprintf("From: %s\r\nReply-To: %s", $to, $to);
     $sent = mail($to, $subject, $content, $headers);
